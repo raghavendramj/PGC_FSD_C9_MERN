@@ -1,0 +1,19 @@
+Request URL: http://127.0.0.1:5500/Day_13_Revision/AjaxPromiseProj/index.html
+Request Method: GET
+Status Code: 200 OK
+Remote Address: 127.0.0.1:5500
+Referrer Policy: strict-origin-when-cross-origin
+
+Protocol: http://
+Domain: 127.0.0.1:
+Port : 5500/
+LocationOfHTML : Day_13_Revision/AjaxPromiseProj/index.html
+Parameters: someData
+
+
+FrontEnd- Browser											BackEnd => WebServer
+	www.myWebsite.com           -> 					home.html, myWebsite.html, contacus.html, prods.html
+	home.html 							<- 					home.html
+		-> contactUs					-> 					home.html, myWebsite.html, contacus.html, prods.html
+	contacus.html 						<- 					contacus.html
+		

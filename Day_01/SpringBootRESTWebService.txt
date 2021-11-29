@@ -1,0 +1,30 @@
+@Entity
+Student
+	-> id, firstName, lastName, email
+
+@Repository
+StudentRepository extends JpaRepository<Student, Integer> => Create a table based on above info.
+
+StudentService	 -> Interface
+	-> findAll
+	-> findById
+	-> save(Student)
+	-> update(Student)
+	-> delete(Student)
+
+@Service	
+StudentServiceImpl implements StudentService
+	-> findAll
+	-> findById
+	-> save(Student)
+	-> update(Student)
+	-> delete(Student)
+	
+@RestController
+StudentController -> /studentResource
+	http://localhost:8081/students 	-> @GetMapping => /students 
+	http://localhost:8081/students 	-> @PostMapping => /students =>@RequestBody => Student Object as JSON
+	http://localhost:8081/students 	-> @PutMapping => /students => @RequestBody => Student Object as JSON
+	http://localhost:8081/students/1	-> @DeleteMapping => /students/{ id} => Path Variable
+	http://localhost:8081/students/1	-> @GetMapping => /students/{id} => Path Variable
+	http://localhost:8081/students?studentId=1	-> @GetMapping => /students => RequestParam Variable

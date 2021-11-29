@@ -1,0 +1,31 @@
+MicorServices Communication:
+-------------------------------------------------------------------------------------------------------------
+Hobby
+	-> id
+	-> name
+HobbyMicroService:- Spring Boot Application
+	GET 		-> http://localhost:8082/hobbys/{id} 	-> @GetMapping => /hobbys/1 =>  "Watching Cricket"
+	POST -> http://localhost:8021/hobbys 	-> @PostMapping => /hobbys =>@RequestBody => Hobby Object as JSON
+		{
+			"name" : "Watching Cricket"
+		}
+-------------------------------------------------------------------------------------------------------------
+Person
+	-> id -> AUTO_INCREMENT
+	-> name
+	-> age
+	-> hobby
+
+PersonMicroService:- Spring Boot Application
+	POST http://localhost:8081/Persons
+		{
+			"name" : "Raghavendra",
+			"age": "29"
+		}
+	 @PostMapping => /Persons =>@RequestBody => Person Object as JSON -> Person: name -> Raghavendra, age: 29
+		-> hobby
+				url -> http://localhost:8082/hobbys/{id}
+				String hobbyFromMS = restTemplate.getForObject(url, String.class);
+				Person: name -> Raghavendra, age: 29, hobby: hobbyFromMS
+				=> saved into database.
+-------------------------------------------------------------------------------------------------------------
