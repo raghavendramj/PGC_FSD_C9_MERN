@@ -1,0 +1,33 @@
+OSI Model -> Open Systems Interconnection (OSI) reference model
+
+
+Sender :
+---------------
+Physical Layer
+	-> data gets converted into a bitstream, a string of 0s and 1s. 11010100101110011
+Data-Link Layer
+	-> takes packets from the network layer and breaks them down into frames
+Network Layer
+	-> Sender:- breaks down the segments into smaller units called packets on the sender’s device.
+	-> Receiver:- reassembles the packets into segments on the receiver’s device
+Transport Layer
+	-> Sender :- breaks down the data from the session layer into segments
+	-> Receiver :- reassembles the segments into data on the receiving device
+Session Layer
+	-> the opening and the closing of communication is known as a session.
+Presentation Layer
+	-> Sender -> adds encryption at the sender’s end and decodes the encryption at the receiver’s end.
+	-> Receiver :- translates the incoming data into a syntax that the application layer can understand. 
+Application Layer
+	-> is responsible for the protocols and data manipulation that the software relies on. 
+
+
+Receiver:
+---------------
+Physical Layer
+Data-Link Layer
+Network Layer
+Transport Layer
+Session Layer
+Presentation Layer
+Application Layer

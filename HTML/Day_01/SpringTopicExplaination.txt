@@ -1,0 +1,23 @@
+public class GreetingServiceFactory {
+public GreetingService getGreetingService(String language)
+		if (language.equals("english")) {
+		return new EnglishGreetingService();
+		} else if (language.equals("french")) {
+		return new FrenchGreetingService();
+		}
+
+Spring -> Spring Container / IoC Container
+				-> creates -> spring beans / bean(s) -> dependency classes
+				Bean Factory
+					-> light weight, instantiates when required only
+					-> generally used in mobile apps
+				Application Context
+					-> heavy weight loads all the beans at the startup of application
+	IoC -> Inversion Of Control -> Framework creates the object and injects in the code -> IOC -> DI  in action
+		-> Generic Principle
+			-> DI -> implemention
+
+	Normal Flow
+		Coder -> Control
+	Inverted Flow
+		Framework -> Control
