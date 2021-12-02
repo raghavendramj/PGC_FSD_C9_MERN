@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Session 4</title>
+    <style type="text/css">
+      /*TODO: add the height and width as specified */
+
+      #main-container {
+          height: 100%;
+          width: 100%;
+      }
+
+      #video-container{
+          max-height: 300px;
+          max-width: 700px;
+      }
+
+      #audio-container{
+          width: 540px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <!--TODO: add video -->
+      <video id="video-container" controls autoplay loop muted>
+        <source src="media/Butterfly.mp4" type="video/mp4" />
+      </video>
+      <br />
+
+      <!--TODO: add audio -->
+      <audio id="audio-container" controls loop>
+        <source src="media/vibes.mp3" type="audio/mpeg" />
+        <p>Your broswer doesn't support HTML5 audio</p>
+      </audio>
+    </div>
+  </body>
+</html>

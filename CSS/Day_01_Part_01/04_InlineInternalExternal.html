@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Priority of CSS</title>
+    <style>
+      /* Internal CSS */
+      #para2 {
+        color: blue;
+      }
+
+      #myDiv {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Inline CSS -->
+    <p id="para1" style="color: red">This is a paragraph 1.</p>
+    <p id="para2">This is a paragraph 2.</p>
+    <p id="para3">This is a paragraph 3.</p>
+
+    <div id="myDiv" style="color: black">
+      <h2>This is my division</h2>
+    </div>
+  </body>
+</html>
