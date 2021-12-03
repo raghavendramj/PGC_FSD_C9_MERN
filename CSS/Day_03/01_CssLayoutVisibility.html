@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>CSS Layouts</title>
+    <style>
+      div {
+        margin: 10px;
+        display: inline-block;
+      }
+
+      #container1 {
+        width: 150px;
+        height: 100px;
+        background: lightblue;
+        /* overflow: hidden; */
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      
+      #container2 {
+        width: 150px;
+        height: 150px;
+        background: greenyellow;
+      }
+
+      #container3 {
+        width: 150px;
+        height: 150px;
+        border: medium solid yellow;
+        background: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container1">By default, HTML elements have a display behavior as block or inline. Elements that each start with a new line (<p> tags in this example) are called block-level elements, and the others (<span>) which can be placed side by side are inline elements.
+    </div>
+    <div id="container2">div#container2</div>
+    <div id="container3">div#container3</div>
+  </body>
+</html>

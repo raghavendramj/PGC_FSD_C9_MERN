@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>CSS Combinators</title>
+    <style>
+
+
+      div {
+        border: medium solid orange;
+      }
+      div p#firstPara {
+        color: red;
+      }
+
+      div p#secondPara {
+        text-indent: 20px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my first Paragraph</p>
+    <p>This is my second Paragraph</p>
+    <p>This is my third Paragraph</p>
+    <div>
+      <p id="firstPara">This is my fourth Paragraph</p>
+      <p id="secondPara">This is my fifth Paragraph</p>
+    </div>
+    <p>This is my sixth Paragraph</p>
+  </body>
+</html>
