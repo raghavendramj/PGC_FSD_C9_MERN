@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Colors - Hands-On </title>
+    <style>
+      div {
+        height: 15vh;
+        width: 15vh;
+        margin: 10px;
+        padding: 25px;
+        border: thin solid black;
+        box-sizing: border-box;
+        display: inline-block;
+      }
+
+      #container1 {
+        color: red;
+      }
+
+      #container2 {
+        /* FF -> Red FF -> Green FF -> Blue */
+        color: #00ffff;
+      }
+
+      /* Range -> Red Blue Green => 0 0 0 to 255 255 255; */
+      #container3 {
+        color: rgb(0, 0, 0);
+      }
+
+      /* Hue, Saturation, lightness */
+      #container4 {
+        color: hsl(120, 100%, 50%);
+      }
+
+      /* Red Blue Green A=Opacity */
+      #container5 {
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+       /* Hue, Saturation, lightness + A=Opacity*/
+      #container6 {
+        color: hsla(120, 100%, 50%, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container1">Color</div>
+    <div id="container2">Hex</div>
+    <div id="container3">RGB</div>
+    <div id="container4">HSL</div>
+    <div id="container5">RGBA</div>
+    <div id="container6">HSLA</div>
+  </body>
+</html>

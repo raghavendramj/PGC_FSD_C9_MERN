@@ -1,0 +1,39 @@
+ID Selector 					-> #<TagName> { property : value}
+									ex-> #firstSpan { color: blue; }
+CLASS Selector 			->  .<TagName> 	 {property : value }
+									ex ->  .spanClass{ font-size: x-large; }
+TAGNAME Selector 		-> <TagName> 	 {property : value }
+									ex->  span{ font-family: 'Courier New'; }
+
+
+Priority of a CSS selector :- ID > CLASS > TAGNAME(ELEMENT)
+
+Inline vs Internal vs External
+	Order of priority: Inline > Internal > External.
+
+
+h3
+	-> h3 -> id, class	-> grey(Element) < black(Class)	< brown(Id)
+	-> h3 -> class		-> grey(Element) < black(Class)
+	-> h3				-> grey(Element)
+
+Style -> h3 -> grey
+			 h3.class_h3 -> black
+			 h3#id_h3 -> brown
+
+
+Relative
+	-> 100 inces canvas
+			-> div -> 30 -> 100 (30%) 
+	-> 50 inces canvas
+			-> div -> 30 -> 50 (30%) 
+
+Absolute
+	-> 100 inces canvas
+			-> div -> 40 -> 100 (40) 
+	-> 50 inces canvas
+			-> div -> 40 -> 50 (40) 
+
+
+
+

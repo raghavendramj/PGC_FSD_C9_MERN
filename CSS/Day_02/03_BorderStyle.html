@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Box Model!</title>
+    <style>
+      h1 {
+        margin: 100px;
+        padding: 10px;
+        /* border-width: 5px; */
+        /* border-width: thin; */
+        /* border-width: medium; */
+        border-width: thick;
+        border-style: solid;
+        border-color: red blue orange green;
+        border-radius: 10px;
+
+        outline: 20px solid blue;
+        outline-offset: 15px;
+      }
+
+      h2 {
+        /* border-top: thick solid black ; */
+        border-top: thick dotted red;
+        border-left: medium solid blue;
+        border-right: medium solid black;
+        border-bottom: thick dotted orange;
+        border-radius: 10px;
+        margin-top: 100px;
+
+        outline: 2px solid red;
+        outline-offset: 15px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>H1 Welcome to BOX Model!</h1>
+    <h2>H2 Welcome to BOX Model!</h2>
+  </body>
+</html>

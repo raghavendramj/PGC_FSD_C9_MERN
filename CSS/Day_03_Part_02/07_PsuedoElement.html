@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>CSS Children</title>
+    <style>
+      .fancy {
+        /* X and Y, blur radius, and color. */
+        text-shadow: 2px 2px 3px gold;
+      }
+
+      /* <p> elements that are not in the class `.fancy` */
+      p:not(.fancy) {
+        color: green;
+      }
+
+      /* Elements that are not <p> elements */
+      body :not(p) {
+        text-decoration: underline;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>I am a paragraph.</p>
+    <p class="fancy">I am so very fancy!</p>
+    <div>I am NOT a paragraph.</div>
+    <h2>
+      <span class="foo">foo inside h2</span>
+      <br />
+      <span class="bar">bar inside h2</span>
+    </h2>
+  </body>
+</html>

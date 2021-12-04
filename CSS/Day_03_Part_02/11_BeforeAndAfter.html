@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Before and After</title>
+    <style>
+      p::before {
+        /* content: url(images/logo-chefs-table.png); */
+        content: "This is before text ---> ";
+        /* content: url(images/logo-chefs-table.png); */
+       }
+
+      p::after {
+        content: " <--- This is after text  ";
+      }
+      .ribbon {
+        background-color: #5bc8f7;
+      }
+
+      .ribbon::before {
+        content: "Looka at this orange box";
+        background-color: orange;
+        border-style: dotted;
+        border-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Message</p>
+    <span class="ribbon">Notice where the orange box is.</span>
+  </body>
+</html>

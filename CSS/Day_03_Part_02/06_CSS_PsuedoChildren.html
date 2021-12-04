@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>CSS Children</title>
+    <style>
+      p:first-child {
+        color: red;
+      }
+      p:last-child {
+        color: blue;
+      }
+
+      h4:first-of-type{
+          color: blueviolet;
+      }
+
+      h4:last-of-type{
+          color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <div>
+      <p>This is paragraph 3.</p>
+      <p>This is paragraph 4.</p>
+      <span>
+        <p>This is paragraph 5.</p>
+        <p>This is paragraph 6.</p>
+      </span>
+      <h4>This is h4 - 1.</h4>
+      <h4>This is h4 - 2.</h4>
+      <h4>This is h4 -3.</h4>
+    </div>
+    <h4>This is h4 - 4.</h4>
+    <h4>This is h4 - 3.</h4>
+    <p>This is paragraph 7.</p>
+    <h4>This is h4 - 5.</h4>
+  </body>
+</html>

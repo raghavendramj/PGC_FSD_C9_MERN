@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>CSS Pseudo Classes</title>
+    <style>
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        a:active {
+            color: blue;
+        }
+
+        a#upgrad:hover {
+            background-color: yellow;
+        }
+
+        button {
+            margin: 10px;
+        }
+
+        .button-link:link,
+        .button-link:visited {
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button-link:hover {
+            background-color: green;
+        }
+
+        .button-link:active {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="https://www.google.com"> Open Google</a>
+        <br />
+        <br />
+        <a href="https://www.google.com" title="This is the Google Button">
+            <button class="button-link">Google</button>
+        </a>
+
+        <a id="upgrad" href="https://www.upgrad.com/" target="_blank">Welcome to upGrad</a>
+    </div>
+</body>
+
+</html>

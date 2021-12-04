@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>CSS Pseudo Classes</title>
+    <style>
+        /* STATE : Link is unvisited(Not clicked yet!) */
+        a:link {
+            color: red;
+        }
+
+        /* STATE : HOVER anchor tag is hovered using mouse pointer */
+        a:hover {
+            color: black;
+        }
+
+        p:hover {
+            border: 1px solid black;
+            background-color: green;
+            cursor: pointer;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* STATE : ACTIVE anchor tag is just clicked */
+        a:active {
+            color: yellow;
+        }
+
+        /* STATE : VISITED anchor tag is after link is visited*/
+        a:visited {
+            color: green;
+            background-color: yellow;
+        }
+
+        a#instagram:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="upgrad" href="https://www.upgrad.com/" target="_self">Welcome to upGrad</a>
+    <br />
+    <a id="linkedin" href="https://www.linkedin.com/" target="_self">LinkedIn</a>
+    <br />
+    <p> When the paragraph is clicked, the paragraph becomes active and the background color of the paragraph becomes
+        green as well as the text color becomes white. </p>
+
+</body>
+
+</html>

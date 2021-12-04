@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS z-index</title>
+        <style>
+            #div1 {
+                position: static;
+                background-color: green;
+            }
+            #div2 {
+                position: relative;
+                top: 50px;
+                left:50px;
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+            #div3 {
+                position: absolute;
+                top: 50px;
+                left:100px;
+                height: 50px;
+                width: 50px;
+                background-color: red;
+            }
+            #div4 {
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                height: 50px;
+                width: 50px;
+                background-color: pink;
+            }
+            #div5 {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                height: 50px;
+                width: 50px;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">static</div>
+        <div id="div2">relative
+            <div id="div3">absolute</div>
+        </div>
+        <div id="div4">#div4</div>
+        <div id="div5">#div5</div>
+    </body>
+</html>

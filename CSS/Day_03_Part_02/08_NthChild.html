@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>CSS Children</title>
+    <style>
+      p:nth-child(2) {
+        color: red;
+      }
+
+      p:nth-last-child(2) {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>This is paragraph 1.</p>
+    <p>  p:nth-child(2): This is paragraph 1.5.</p>
+    <div>
+      <p>This is paragraph 2.</p>
+      <p> p:nth-child(2) : This is paragraph 3.</p>
+      <p> nth-last-child(2) : This is paragraph 4.</p>
+      <p>This is paragraph 5.</p>
+    </div>
+  </body>
+</html>
