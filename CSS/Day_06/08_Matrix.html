@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>CSS Transforms - tarnslate()</title>
+    <style>
+      div {
+        border: thin solid blueviolet;
+        background-color: yellowgreen;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 6px;
+        display: inline-block;
+      }
+
+      #scale {
+        transform: scaleX(1.5, 1.5);
+      }
+      
+
+      #skew{
+        transform: skew(5deg, 5deg);
+      }
+
+      #translate{
+          transform: translate(20px, 30px);
+      }
+
+      #matrix{
+
+        /* scaleX, skewY, skewY, scaleY, translatex, translatey */
+        transform: matrix(1.5, -.5, 0.8, 1.8, 50, 50);
+      }
+
+
+      /* #matrix {
+        scale
+        transform: matrix()
+      } */
+ 
+    </style>
+  </head>
+  <body>
+    <div id="scale">scale(1.5, 1.5)</div>
+    <div id="skew">skew(5deg, 5deg)</div>
+    <div id="translate">translate(20px, 30px)</div>
+    <div id="matrix">matrix(1.5, -.5, 0.8, 1.8, 50, 50)</div>
+  </body>
+</html>

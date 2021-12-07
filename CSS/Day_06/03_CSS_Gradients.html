@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>CSS Multiple Backgrounds!</title>
+    <style>
+      div {
+        height: 100px;
+        background-color: red;
+        margin: 10px;
+      }
+      #first {
+        background: linear-gradient(to left, lightblue, yellow);
+      }
+      #second { 
+        background: linear-gradient(to Right, lightblue, yellow);
+      }
+
+      #third { 
+        background: linear-gradient(to bottom Right, lightblue, yellow);
+      }
+
+      #fourth { 
+        background: linear-gradient(260deg, lightblue, yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Multiple Backgrounds</h1>
+    <p>The following div has 2 bgs</p>
+    <div id="first">Gradient Backgrounds - Left to Right</div>
+    <div id="second">Gradient Backgrounds - Right to Left</div>
+    <div id="third">Gradient Backgrounds - Right to Left</div>
+    <div id="fourth">Gradient Backgrounds - Angle</div>
+  </body>
+</html>

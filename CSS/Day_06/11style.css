@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  /* animation: colorChange 2s ease-in 4s normal forwards running; */
+  animation-name: colorChange;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+}
+
+p {
+  color: white;
+  font-size: 150px;
+  text-align: center;
+}
+
+@keyframes colorChange {
+  from {
+    background-color: yellowgreen;
+  }
+  20% {
+    background-color: lightskyblue;
+  }
+  50% {
+    background-color: green;
+  }
+  70% {
+    background-color: purple;
+  }
+  to {
+    background-color: black;
+  }
+}

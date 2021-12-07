@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>CSS Transforms - tarnslate()</title>
+    <style>
+      div {
+        border: thin solid blueviolet;
+        background-color: yellowgreen;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        /* transition: width 1s, linear 2s; */
+        /* transition: width 1s, height 1s, transform 1s; */
+      }
+      div#second {
+        transition-property: width;
+        transition-duration: 5s;
+        transition-timing-function: ease-in;
+        /* transition-delay: 1s; */
+      }
+
+      div:hover {
+        width: 200px;
+        /* height: 200px; */
+        transform: rotate(180deg);
+        background-color: lightskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scale"></div>
+    <div id="second"></div>
+  </body>
+</html>

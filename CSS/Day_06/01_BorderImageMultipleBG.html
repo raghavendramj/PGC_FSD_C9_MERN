@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Div With Backgrounds</title>
+    <style>
+      div {
+        padding: 15px;
+        border: 20px solid transparent;
+        border-image-source: url("images/oranges.jfif");
+        border-image-slice: 30;
+        border-image-width: 20px;
+        border-image-repeat: round;
+        /* border-image: url("images/oranges.jfif") 30 round; */
+      }
+
+      p {
+        padding: 15px;
+        border: 10px solid transparent;
+        /* Short Hand CSS for border Image */
+        /* 'border-image-source', 'border-image-slice', 'border-image-width', 'border-image-outset' and 'border-image-repeat'. Omitted values are set to their initial values. */
+        border-image: url("images/oranges.jfif") 30 round;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Some content</div>
+
+    <p>This is my paragraph</p>
+  </body>
+</html>

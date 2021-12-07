@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>CSS Transforms - tarnslate()</title>
+    <style>
+      div {
+        border: thin solid blueviolet;
+        background-color: yellowgreen;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+
+        margin: 0 auto;
+        margin-top: 20%;
+        margin-bottom: 20%;
+
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+      }
+      #myDiv {
+        transform: scale(1, 1);
+      }
+      #third {
+        transform: scale(.5, .5);
+      }
+      #sec {
+        /* width and height */
+        transform: scale(1.5, 1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">I am the original div</div>
+    <div id="sec">I am the expanded div</div>
+    <div id="third">I am the expanded div</div>
+  </body>
+</html>

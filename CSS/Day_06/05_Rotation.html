@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>CSS Transforms - tarnslate()</title>
+    <style>
+      div {
+        border: thin solid blueviolet;
+        border-radius: 10px;
+        background-color: yellowgreen;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 20px;
+
+        box-sizing: border-box;
+      }
+      #first {
+        transform: rotate(20deg);
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      #second {
+        transform: rotate(-20deg);
+        position: fixed;
+        right: 0;
+        bottom: 0;
+      }
+      #third {
+        transform: rotate(50deg);
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      #fourth {
+        transform: rotate(-50deg);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first">Div-01</div>
+    <div id="second">Div-02</div>
+    <div id="third">Div-03</div>
+    <div id="fourth">Div-04</div>
+  </body>
+</html>
