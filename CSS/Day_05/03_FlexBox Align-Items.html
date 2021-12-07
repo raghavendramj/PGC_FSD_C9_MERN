@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Flex Box Align</title>
+    <style>
+      /* Flex Children */
+      div {
+        height: 8vh;
+        width: 8vh;
+        border: thin solid red;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      div:nth-child(even) {
+        background-color: lightcyan;
+        width: 12vw;
+      }
+
+      div:nth-child(odd) {
+        background-color: lightgreen;
+      }
+      div.container {
+        background-color: white;
+      }
+
+      /* Flex Parent */
+      .container {
+        height: 55vh;
+        width: 60vw;
+        display: flex;
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* align-items: stretch; */
+        align-items: baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

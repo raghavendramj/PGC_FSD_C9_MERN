@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>CSS Grids</title>
+    <style>
+     .container{
+         display: grid;
+         grid-template-columns: auto auto auto auto;
+         background-color: rgb(33, 150, 243);
+         padding: 10px;
+     }
+
+     .box{
+        background-color: rgb(255, 255, 255, .8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+     }
+
+     #box1{
+         grid-column-start: 1;
+         grid-column-end: 3;
+     }
+
+     #box3{
+         grid-row-start: 2;
+         grid-row-end: 5;
+     }
+     
+    </style>
+  </head>
+  <body>
+      <h1> Grid Elements z</h1>
+    <div class="container">
+      <div id="box1" class="box">1</div>
+      <div id="box2" class="box">2</div>
+      <div id="box3" class="box">3</div>
+      <div id="box4" class="box">4</div>
+      <div id="box5" class="box">5</div>
+      <div id="box6" class="box">6</div>
+      <div id="box7" class="box">7</div>
+      <div id="box8" class="box">8</div>
+      <div id="box9" class="box">9</div>
+    </div>
+  </body>
+</html>

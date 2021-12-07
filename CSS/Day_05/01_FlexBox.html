@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Flex Box</title>
+    <style>
+
+    /* Flex Children */
+      div {
+        height: 5vh;
+        width: 5vh;
+        border: thin solid red;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Flex Parent */
+      .container {
+        height: 50vh;
+        width: 60vw;
+        display: flex;
+        /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+        /* flex-direction: column; */
+        flex-direction: row;        
+        /* flex-wrap: nowrap; */
+        flex-wrap: wrap;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+  </body>
+</html>

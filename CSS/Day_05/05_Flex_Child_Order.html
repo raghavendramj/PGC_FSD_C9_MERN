@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>CSS Flex Box - Children</title>
+    <style>
+        #box1,
+        #box2,
+        #box3,
+        #box4,
+        #box5 {
+            height: 10vh;
+            width: 10vw;
+            border: thin solid red;
+            padding: 5px;
+            margin: 5px;
+        }
+        .container {
+            display: flex;
+            border: thin solid black;
+            height: 50vh;
+        }
+        #box1 {
+            background-color: greenyellow;
+            order: 3;
+        }
+
+        #box2 {
+            background-color: orange;
+            order: 2;
+        }
+
+        #box3 {
+            background-color: brown;
+            order: 4;
+        }
+
+        #box4 {
+            background-color: lightblue;
+            order: 1;
+        }
+
+        #box5 {
+            background-color: lightcoral;
+            order: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
+        <div id="box5">5</div>
+    </div>
+</body>
+
+</html>
