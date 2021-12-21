@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <title>JavaScript Introduction</title>
+  <script>
+    function onClick() {
+      console.log("This is from onclick!");
+      document.getElementById("test").innerHTML = "Welcome to JavaScript";
+    }
+
+    function cleanTheUI() {
+      document.write("Hey Guys, welcome to Empty Canvas!");
+      alert("Welcome to Javascript alert!");
+    }
+  </script>
+  <script src="01_Introduction.js"></script>
+</head>
+
+<body>
+  <div id="test"></div>
+  <p class="para">This is first para</p>
+  <p class="para">This is second para</p>
+  <p class="para">This is third para</p>
+  <button onclick="onClick()">Click to Enter!</button>
+
+  <form action="">
+    <table>
+      <tr>
+        <td>Please Enter your name :</td>
+        <td>
+          <input type="text" name="name" id="name" onchange="onchangeHandler()" />
+        </td>
+      </tr>
+    </table>
+  </form>
+  <button onclick="cleanTheUI()">Click to Erase Everything</button>
+</body>
+
+</html>

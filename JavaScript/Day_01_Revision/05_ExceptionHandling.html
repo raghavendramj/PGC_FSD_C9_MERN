@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Please input a number between 5 and 10:</p>
+
+    <input id="demo" type="text" />
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="message"></p>
+    <p id="finallyBlock"></p>
+
+    <script>
+      function myFunction() {
+        var message, x;
+        message = document.getElementById("message");
+        message.innerHTML = "";
+        x = document.getElementById("demo").value;
+        try {
+          if ((x) => 5 && x <= 10) {
+            message.innerHTML = "TRY BLOCK:-  Valid Number";
+            message.style.color = "green";
+          }
+          if (x == "") throw "is Empty";
+          if (isNaN(x)) throw "not a number";
+          if (x > 10) throw "too high";
+          if (x < 5) throw "too low";
+        } catch (err) {
+          message.innerHTML = "CATCH BLOCK:- Input " + err;
+          message.style.color = "red";
+        } finally {
+          finallyBlock = document.getElementById("finallyBlock");
+          finallyBlock.innerHTML = "FINALLY BLOCK:- You have entered this number :- " + x;
+          finallyBlock.style.color = "brown";
+        }
+      }
+    </script>
+  </body>
+</html>
