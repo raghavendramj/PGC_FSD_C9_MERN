@@ -1,0 +1,21 @@
+Closure
+	-> use outer function's scope variable inside the current function/inner function
+IIFE
+	-> Immediately invoked function expression
+	(function(){
+		console.log("This is the function");
+	})();
+Hoisting
+	Variable Hoisting
+	Function Hoisting
+This Keyword
+	-> normal function -> GLOBAL
+	-> constructor function -> the object that gets created
+	-> object -> the object itself
+	-> html element -> the element itself
+SetTimeout -> takes a callback -> invokes after a certain time delay
+
+How to pass temproary this inside a function
+	-> bind()  -> bind the this to a variable
+	-> call() -> only once we can pass the this temproarily -> arguments are passed normally
+	-> apply() -> only once we can pass the this temproarily -> arguments are passed inside an array
