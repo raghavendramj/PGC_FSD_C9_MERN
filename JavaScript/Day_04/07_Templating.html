@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>HTML Templating</title>
+  </head>
+  <script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      var container = document.getElementById("container");
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        var htmlTemplate = `<p> This is the paragrap1 </p>
+            <p> This is the paragrap2 </p>
+            <p> This is the paragrap3 </p>
+            <p> This is the paragrap4 </p>
+            <a id="myAnchor" href="https://www.upgrad.com/">upGrad.com </a>`;
+        container.innerHTML = htmlTemplate;
+        // container.append(htmlTemplate); -> will append as normal string
+      });
+    });
+  </script>
+
+  <body>
+    <div id="container"></div>
+    <button id="btn">Add Content to Div</button>
+  </body>
+</html>

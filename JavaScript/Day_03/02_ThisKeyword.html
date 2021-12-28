@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Here, this keyword represents the car object.</p>
+    <script>
+      console.log("This is gloabl object : ", this);
+      var car = {
+        carName: "i20",
+        carCompany: "Hyundai",
+        carDetails: function () {
+          return this.carName + " " + this.carCompany;
+        },
+      };
+      console.log(car.carDetails());
+    </script>
+    <button onclick="console.log(this); this.style.backgroundColor = 'yellow'">
+      Hey Click to See this usage!
+    </button>
+  </body>
+</html>

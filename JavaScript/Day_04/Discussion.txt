@@ -1,0 +1,22 @@
+Structure:-
+	Div (Attached Event Handler -> Click )
+		-> Para  (Attached Event Handler -> Click )
+			-> Span  (Attached Event Handler -> Click )
+				-> Image (Attached Event Handler -> Click )
+			
+	Event Bubbling:- 
+		var division = document.getElementById("myDiv");
+        division.addEventListener("click", function () {
+            console.log("This is Division!");
+        });
+		Events are raised in the following sequence.
+			Image -> Span -> Para -> Div
+
+	Event Capturing, we pass 3rd optional parameter
+		var division = document.getElementById("myDiv");
+        division.addEventListener("click", function () {
+            console.log("This is Division!");
+        }, true});
+		Events are raised in the following sequence.
+				Div -> Para -> Span -> Image
+				true -> true -> true

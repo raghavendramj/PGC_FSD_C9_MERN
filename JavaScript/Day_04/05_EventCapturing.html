@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Event Capturing</title>
+</head>
+
+<body>
+    <div id="myDiv">
+        <p id="myPara">
+            <span id="mySpan">
+                <img src="images/logo-facebook.png" width="150" height="150" id="myImage" style="cursor: pointer" />
+            </span>
+        </p>
+    </div>
+
+    <script>
+        var division = document.getElementById("myDiv");
+        division.addEventListener("click", function () {
+            console.log("This is Division!");
+        }, true);
+
+        var para = document.getElementById("myPara");
+        para.addEventListener("click", function () {
+            console.log("This is Paragraph!");
+        }, true);
+
+        var span = document.getElementById("mySpan");
+        span.addEventListener("click", function () {
+            console.log("This is Span!");
+        }, true);
+        var image = document.getElementById("myImage");
+        image.addEventListener("click", function () {
+            console.log("This is Image!");
+        });
+    </script>
+</body>
+
+</html>

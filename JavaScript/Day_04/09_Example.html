@@ -1,0 +1,21 @@
+<body>
+  <div id="container"></div>
+
+  <script>
+    // Set
+    localStorage.setItem("name", "Prachi Agrawal");
+    // Retrieve
+    document.getElementById("container").innerText =
+      loaclStorage.getItem("name");
+  </script>
+
+  <div id="container2"></div>
+
+  <script>
+    // Set
+    sessionStorage.setItem("name", "Prachi Agrawal");
+    // Retrieve
+    document.getElementById("container2").innerText =
+      sessionStorage.getItem("name");
+  </script>
+</body>

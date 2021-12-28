@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>DOM Manip Question</title>
+    <script></script>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+    <a id="myAnchor" href="https://www.upgrad.com/">Click on this Anchor </a>
+    <script>
+        for (let i = 1; i < 5; i++) {
+            let newText = document.createElement("p");
+            newText.innerHTML = "<p>New Paragraph - " + i + "</p>";
+            newText.addEventListener("click", function (event) {
+                console.log("You have clicked Me !", i);
+            });
+            newText.style.cursor = "pointer";
+            document.getElementById("mydiv").appendChild(newText);
+        }
+
+        document
+            .getElementById("myAnchor")
+            .addEventListener("click", function (event) {
+                console.log("Event triggered!");
+                event.preventDefault();
+            });
+    </script>
+</body>
+
+</html>

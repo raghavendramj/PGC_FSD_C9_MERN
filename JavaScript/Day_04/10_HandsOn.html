@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Listeners</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="heading" style="color: pink">Registration form</h1>
+      <p id="intropara" style="color: brown">Please register for more</p>
+      <button type="button" id="btn" onclick="onSubmitHandler()">SUBMIT</button>
+    </div>
+    <script>
+      // 1. Button cursor
+      var btn = document.getElementById("btn");
+      btn.style.cursor = "pointer";
+
+      function onSubmitHandler() {
+        //2. Division color
+        var myDiv = document.getElementById("container");
+        myDiv.style.backgroundColor = "grey";
+
+        //3. Para :- color
+        var para = document.getElementById("intropara");
+        para.style.color = "white";
+        //4. Para :- innerHTML modifiction
+        para.innerHTML = "Registered";
+      }
+    </script>
+  </body>
+</html>

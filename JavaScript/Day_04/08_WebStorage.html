@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Session Storage Demo</title>
+    <script>
+      function loadStorageContent() {
+        sessionStorage.setItem("name", "Raghavendra M J");
+        localStorage.setItem("profession", "Software Engineer");
+        var sessionPara = document.getElementById("session");
+
+        var sessionName = document.createElement("span");
+        sessionName.setAttribute("id", "sessionName");
+        sessionName.innerHTML = sessionStorage.getItem("name");
+        sessionName.style.color = "brown";
+
+        sessionPara.appendChild(sessionName);
+
+        var localPara = document.getElementById("local");
+        var localName = document.createElement("span");
+        localName.setAttribute("id", "localName");
+        localName.innerHTML = localStorage.getItem("profession");
+        localName.style.color = "blue";
+
+        localPara.appendChild(localName);
+      }
+
+      function clearStorage() {
+        sessionStorage.clear();
+        localStorage.clear();
+
+        var session = document.getElementById("session");
+        var sessionName = document.getElementById("sessionName");
+        if (sessionName) {
+            session.removeChild(sessionName);
+        }
+        
+        var local = document.getElementById("local");
+        var localName = document.getElementById("localName");
+        if (localName) {
+            local.removeChild(localName);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>Web and Session Storage Demo</div>
+    <p id="session">Session storage content :</p>
+    <p id="local">Local storage content :</p>
+    <br />
+    <button onclick="loadStorageContent()" style="color: green">
+      Load Storage Content
+    </button>
+    <br />
+    <br />
+    <button onclick="clearStorage()" style="color: red">
+      Clear Storage Content
+    </button>
+  </body>
+</html>
