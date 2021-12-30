@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Async JS - setTimeout</title>
+    <script>
+      let loadParas = () => {
+        setTimeout(() => {
+          document.getElementById("text-01").textContent =
+            "Loaded After 3 seconds";
+          document.getElementById("text-03").hidden = false;
+        }, 3000);
+        document.getElementById("text-02").textContent = "Loaded Instantly";
+      };
+    </script>
+  </head>
+
+  <body>
+    <p id="text-01"></p>
+    <p id="text-02"></p>
+
+    <p id="text-03" hidden>
+      To understand JavaScript (JS) promises, consider a blockbuster movie, such
+      as Avengers. After its successful release, the fans of the movie asked the
+      producer, Marvel Studios, if there will be a sequel. To resolve the fans’
+      queries, Marvel Studios asked the fans to follow the studio on Twitter.
+      The studio promised the fans that it will let them know on Twitter if a
+      sequel is finalised. If it is, then all the followers of Marvel Studios on
+      Twitter will be notified. If, for some reason, the sequel cannot be
+      produced, then the followers will nevertheless be notified.
+    </p>
+
+    <button id="btn" onclick="loadParas()">Load Paragraphs</button>
+  </body>
+</html>
