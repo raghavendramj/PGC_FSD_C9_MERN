@@ -1,10 +1,9 @@
-// const sum = (...arr) => {
-//   return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
-// };
+export const sum = (...arr) => {
+  return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
+};
 
-// export default sum;
-
-export let message = "Hi";
 export function setMessage(msg) {
-  message = msg;
+  customMessage = msg;
 }
+
+export let customMessage = "Welcome to Export and Import Modules";
