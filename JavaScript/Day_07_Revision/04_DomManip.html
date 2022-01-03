@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Dom Manipulation + Session Storage</title>
+    <style>
+      #lgnBtn {
+        float: right;
+      }
+    </style>
+    <script>
+      function loginUser() {
+        let usernameField = document.getElementById("username").value;
+        let passwordField = document.getElementById("password").value;
+ 
+        if (document.getElementById("lgnBtn").value === "Login") { 
+          localStorage.setItem("username", usernameField);
+          localStorage.setItem("password", passwordField);
+          document.getElementById("lgnBtn").value = "Logout";
+        } else {
+          localStorage.clear();
+          document.getElementById("lgnBtn").value = "Login";
+        }
+ 
+        //Clearing the input fields
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+      }
+    </script>
+  </head>
+  <div id="container">
+    <div>upGrad</div>
+  </div>
+
+  <h3>Please Login</h3>
+  <table>
+    <tr>
+      <td><label for="username"> Username : </label></td>
+      <td><input type="text" name="username" id="username" /></td>
+    </tr>
+    <tr>
+      <td><label for="password"> Password : </label></td>
+      <td><input type="password" name="password" id="password" /></td>
+    </tr>
+    <tr>
+      <td>
+        <input type="submit" value="Login" id="lgnBtn" onclick="loginUser()" />
+      </td>
+    </tr>
+  </table>
+</html>
