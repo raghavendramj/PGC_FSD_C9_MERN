@@ -1,0 +1,53 @@
+body {
+    background-color: purple;
+}
+* {
+    box-sizing: border-box;
+}
+.main-container {
+    padding: 50px;
+    text-align: center;
+}
+h1 {
+    color: black;
+}
+#searchbar {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 2px;
+    border: 1px solid purple;  
+}
+#search {
+    position: relative;
+}
+#dishList {
+    display: grid;
+    padding-inline-start: 0;  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    grid-gap: 30px;
+}
+.dishes {
+    text-align: left;
+    background-color: lightgray;
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas:
+        'strMeal strMealThumb'
+        'strArea strMealThumb';  
+}
+.dishes > h2 {
+    grid-area: strMeal;
+}
+.dishes > p {
+    grid-area: strArea;
+    margin: 0px;
+    margin-top: -19px;
+}
+.dishes > img {
+    grid-area: strMealThumb;
+    max-height: 150px;
+   
+}

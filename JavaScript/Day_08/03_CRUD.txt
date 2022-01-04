@@ -12,11 +12,13 @@ create table employee(
 );
 Note :
 Idempotent :- Making multiple identical requests has the same effect as making a single request. 
+Example: GET, PUT, DELETE
 
 Non Idempotent :- If an operation always causes a change in state, 
                     like POSTing the same message to a user over and over, 
                     resulting in a new message sent and stored in the database every time, 
                     we say that the operation is NON-IDEMPOTENT.
+                    Example: POST
 
 Map -> each entry in the array
 converting each object to the html string
