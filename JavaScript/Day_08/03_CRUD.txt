@@ -1,0 +1,40 @@
+GET -> C -> Create -> select * from employee; //Idempotent
+POST -> R -> Read  -> insert into employee(id, name, role) values(1, 'raghav', 'admin'); -> Non Idempotent
+//ERROR: 1062: Duplicate entry '1' for key 'employee.PRIMARY'
+PUT -> U -> Update -> update employee set name='raghavendra' where id=1; //Idempotent
+DELETE -> D -> Delete -> delete from employee where id = 1; //
+
+create table employee(
+    id bigint not null auto_increment,
+    name varchar(200),
+    role varchar(200),
+    primary key (id)
+);
+Note :
+Idempotent :- Making multiple identical requests has the same effect as making a single request. 
+
+Non Idempotent :- If an operation always causes a change in state, 
+                    like POSTing the same message to a user over and over, 
+                    resulting in a new message sent and stored in the database every time, 
+                    we say that the operation is NON-IDEMPOTENT.
+
+Map -> each entry in the array
+converting each object to the html string
+Object
+{
+    "userId": 1,
+    "id": 1,
+    "title": "delectus aut autem",
+    "completed": false
+},
+
+HTML String
+"<tr><td>"+eachTodo.userId+"</td><td>"+eachTodo.title+"</td><td>"+eachTodo.completed+"</td></tr>
+"<tr><td>"+eachTodo.userId+"</td><td>"+eachTodo.title+"</td><td>"+eachTodo.completed+"</td></tr>
+"<tr><td>"+eachTodo.userId+"</td><td>"+eachTodo.title+"</td><td>"+eachTodo.completed+"</td></tr>
+"<tr><td>"+eachTodo.userId+"</td><td>"+eachTodo.title+"</td><td>"+eachTodo.completed+"</td></tr>
+"<tr><td>"+eachTodo.userId+"</td><td>"+eachTodo.title+"</td><td>"+eachTodo.completed+"</td></tr>
+"<tr><td>"+eachTodo.userId+"</td><td>"+eachTodo.title+"</td><td>"+eachTodo.completed+"</td></tr>"
+
+ let templateHTML = `<tr><td>${eachTodo.userId}</td><td>${eachTodo.title}</td><td>${eachTodo.completed}</td></tr>`;
+ return templateHTML.trim();

@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>AJAX Demo</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      let getTodos = () => {
+        let url = "https://jsonplaceholder.typicode.com/todos/";
+
+        let xhttp = new XMLHttpRequest();
+        //1st Parameter :- Method -> GET, POST, PUT, DELETE
+        //2nd Parameter :- URL
+        //3rd Parameter :- Syncronous = FALSE, and Asyncronous = TRUE
+        xhttp.open("GET", url, true);
+        xhttp.send();
+
+        //Event Listner -> When we get the response, this callback will be triggered
+        xhttp.onreadystatechange = () => {
+          // xhttp.readyState -> https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+          // 0 -> UNSENT
+          // 1 -> OPENED
+          // 2 -> HEADERS_RECEIVED
+          // 3 -> LOADING
+          // 4 -> DONE
+          // xhttp.status -> https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+          // Informational responses (100–199)
+          // Successful responses (200–299)
+          // Redirection messages (300–399)
+          // Client error responses (400–499)
+          // Server error responses (500–599)
+
+          // 4 -> DONE and 200 -> Success
+          if (xhttp.readyState === 4 && xhttp.status === 200) {
+            console.log("Response received :- ", xhttp.response);
+
+            let responseArray = JSON.parse(xhttp.response);
+            let arrayOfTRs = responseArray.map((eachTodo) => {
+              let templateHTML = `<tr><td>${eachTodo.userId}</td><td>${eachTodo.title}</td><td>${eachTodo.completed}</td></tr>`;
+              return templateHTML.trim();
+            });
+
+            let joinedTRs = arrayOfTRs.join("");
+            let tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = joinedTRs;
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h3>AJAX Introduction</h3>
+    <div id="myDiv"></div>
+    <button onclick="getTodos()">Get ToDos</button>
+    <br />
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th>UserId</th>
+          <th>Title</th>
+          <th>Completed</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  background-image: url("https://images.pexels.com/photos/2943603/pexels-photo-2943603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#main-container {
+  position: relative;
+  left: 40%;
+  background-color: yellow;
+  width: 400px;
+}
+
+#booksearch {
+  position: relative;
+  left: 30%;
+}
+
+#btn {
+  position: relative;
+  left: 42%;
+}
