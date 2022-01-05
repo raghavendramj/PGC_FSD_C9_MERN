@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+
+        <!-- Import CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/list.css"> 
+    </head>
+    <body>
+        <div class="main-container">
+            <!-- Added the header elements: Logo and Login Button -->
+            <header class="header-footer" id="header"></header>
+
+            <!-- Added the main body content: List view of hotel with details and map view div -->
+            <div id="list-container">
+                <!-- Added nav pills/tabs for list view and map view using bootstrap --> 
+                <ul class="nav nav-pills" id="pills-tab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#list-view">List View</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#map-view">Map View</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tab-content">
+                    <div id="list-view" class="tab-pane fade show active">
+                        <a href="detail.html">
+                            <div class="hotel">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="hotel-image-small">
+                                <div class="hotel-name-rating">
+                                    <h3>Radisson Blu Hotel</h3>
+                                    <div id="rating">
+                                        <span class="fa fa-star checked" id="1"></span>
+                                        <span class="fa fa-star checked" id="2"></span>
+                                        <span class="fa fa-star checked" id="3"></span>
+                                        <span class="fa fa-star checked" id="4"></span>
+                                        <span class="fa fa-star checked" id="5"></span>
+                                    </div>
+                                    <p>New Delhi</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="hotel">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" class="hotel-image-small">
+                            <div class="hotel-name-rating">
+                                <h3>The Lalit New Delhi</h3>
+                                <div id="rating">
+                                    <span class="fa fa-star checked" id="1"></span>
+                                    <span class="fa fa-star checked" id="2"></span>
+                                    <span class="fa fa-star checked" id="3"></span>
+                                    <span class="fa fa-star-half-o checked" id="4"></span>
+                                    <span class="fa fa-star" id="5"></span>
+                                </div>
+                                <p>New Delhi</p>
+                            </div>
+                        </div>
+    
+                        <div class="hotel">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" class="hotel-image-small">  
+                            <div class="hotel-name-rating">
+                                <h3>Taj Palace</h3>
+                                <div id="rating">
+                                    <span class="fa fa-star checked" id="1"></span>
+                                    <span class="fa fa-star checked" id="2"></span>
+                                    <span class="fa fa-star checked" id="3"></span>
+                                    <span class="fa fa-star checked" id="4"></span>
+                                    <span class="fa fa-star" id="5"></span>
+                                </div>
+                                <p>New Delhi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map-view" class="tab-pane fade">
+                        <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added the footer elements: Contact Us Button, Social Media Links -->
+            <footer class="header-footer" id="footer"></footer>
+            <script src="scripts/common.js"></script>
+        </div>
+    </body>
+</html>
