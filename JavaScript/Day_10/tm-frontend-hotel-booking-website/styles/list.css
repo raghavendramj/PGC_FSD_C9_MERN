@@ -1,0 +1,41 @@
+/* Added CSS for hotel image on hotel list page*/
+.hotel-image-small {
+    height: 200px;
+    width: 250px;
+}
+.hotel{
+    margin: 4% 5% 0% 5%; 
+    background-color: lightgrey;
+    width: 40%;
+    float: left;
+    display: flex;
+    justify-content: start;
+    align-content: center;
+}
+.hotel:hover {
+    background-color: rosybrown;
+}
+#list-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 6%;
+}
+#list-map {
+    position: relative;
+    top: 0%;
+}
+#select-list {
+    position: absolute;
+    left: 42%;
+    font-weight: bold;
+}
+#select-map {
+    position: absolute;
+    left: 50%;
+    font-weight: bold;
+}
+#pills-tab {
+    justify-content: center;
+}
+
