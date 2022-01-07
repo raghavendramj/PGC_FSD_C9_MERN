@@ -1,0 +1,208 @@
+1. Mention some popular features of ES6.
+    Supports constants/immutable variables. -> const 
+    Block scope support for all variables, constants and functions.
+    Introduction to arrow functions
+    Handling extended parameter
+    Default parameters
+    Extended and template literals
+    De-structuring assignment
+    Promises
+    Classes
+    Modules
+
+2. What are the object oriented features supported in ES6.
+    Classes -> getters, setters, constructors
+    Methods / functions
+    Inheritence
+    Encapsualtion -> Inside the class, we need an object
+
+3. Give a thorough comparison between ES5 and ES6.
+
+ES 5
+    ES5 is the fifth edition of the ECMAScript which was introduced in 2009.
+    Primitive data types that are string, boolean, number, null, and undefined are supported by ES5.	
+    we could define the variables by using the var keyword only	
+    Both function and return keywords are used in order to define a function in ES5.	
+    function add(a, b) {
+        return a + b;
+    }
+    In ES5, a for loop is used to iterate over elements.	
+
+ES 6
+    ES6 is the sixth edition of the ECMAScript which was introduced in 2015.
+    Primitive data types -> string, boolean, number, null, and undefined + New Introduction (symbol)
+    In addition to var, there are two new ways to define variables: let and const.
+    An arrow function is a newly added feature in ES6 in which we don't require the function keyword in order to define the function.
+    (a, b) => a + b;
+    idea of for...of loop in order to iterate over the values of the iterable objects.
+
+
+4. What is the difference between let and const? What distinguishes both from var?
+
+var
+    Var is a function scoped keyword
+    will become part of window object if we create in the glbal scope
+
+let and const
+    let and const have block scope.
+    let keyword are mutable
+    const keyword are block-scoped and immutable
+    will not be part of window object if we create in the glbal scope
+
+    Not possible
+    let a = 10;
+    let a = 20;
+
+    Possible
+    const m = 10;
+    Not possible -> immutable
+    m = 20;
+
+    Possible -> mutable
+    let x = 30;
+    x = 40; 
+
+5. Discuss the arrow function.
+    const add = (a, b) => a + b;
+
+    Few things to note
+        It reduces the size of the code.
+        For a single-line function, the return statement is optional.
+        Bind the context lexically.
+        For a single-line statement, functional braces are not required.
+        Doesn’t work with new 
+
+6. When should one not use arrow functions?
+
+Function Hoisting, Named Functions:
+    As arrow functions are anonymous, we cannot use them when we want function hoisting or when we want to use named functions.
+
+Object methods:
+ var a = {
+    b: 7,
+    func: () => {
+        this.b--;
+    }
+ }
+
+ a.func()
+
+ Callback functions with dynamic context:
+  var btn = document.getElementById('clickMe');
+  btn.addEventListener('click', () => {
+    this.classList.toggle('on');
+  });
+
+7. What is the “spread” operator in ES6?
+  let birds = ['Sparrow', 'Parrot', 'Peacock'];
+  let animals = ['Lion', 'Tiger', 'Hyena', 'Elephan'];
+
+  let livingBeings = [...birds, ...animals, 'Humans'];
+  console.log(livingBeings);
+
+  function add (a, b, ...others){
+    let sum = a + b;
+    sum = others.reduce((x, acc) => (x+acc), sum);   
+    return sum;
+  };
+  add(10, 20, 30, 40, 50, 60);
+
+8. Explain Destructuring in ES6.
+    
+  let greeting =['Good','Morning'];  
+  let [msg1, msg2] = greeting;
+  console.log("Message 1: ", msg1);
+  console.log("Message 2: ", msg2);
+
+    let person = {
+        firstName : 'Raghavendra',
+        lastName : 'M J'
+    }
+
+    let {firstName: fname, lastName, lname } = person;
+    console.log("First name :", fname);
+    console.log("Last name :", lname);
+
+    let {firstName, lastName } = person;
+    console.log("First name :", firstName);
+    console.log("Last name :", lastName);
+
+
+9. What are Promises in ES6?
+  What are the states of Promises in ES6?
+    Pending: This refers to the initial state of every promise. It indicates that the result has not yet been computed.
+    Fulfilled: It refers to the completion of a task.
+    Rejected: It indicates the failure that arises during computation.
+
+
+10. Discuss the template literals in ES6.
+    let s1 = "Good";    
+    let s2 = "Day";     
+    let s = `${s1} ${s2}`;  
+    console.log(s);  
+
+11. What do you understand about IIFE (Immediately Invoked Function Expressions)?
+
+    Named IIFE
+    (function add(a, b){
+        return a + b;
+    })(10, 20);
+
+    IIFE
+    (function(a, b){
+        return a + b;
+    })(10, 20);
+
+12. What is Bubbling and Capturing?
+There are three stages of event propagation:
+
+Capturing Phase 
+    - the event begins with the window and progresses through each element until it reaches the target element.
+Target Phase 
+    - The event has arrived at the target element.
+Bubbling Phase 
+    - The event bubbles up from the target element and then up every element until it reaches the window
+
+13. What is the difference between for..of and for..in?
+
+    let arr = [3, 4, 5];
+
+    for (let i in arr) {
+    console.log(i); // "0", "1", "2", -> indexes
+    }
+
+    for (let i of arr) {
+    console.log(i); // "3", "4", "5" -> values
+    }
+
+14. Name some array methods that were introduced in ES6.
+
+Array.from()	
+    It will convert iterable values and array-like values into arrays.
+Array.of()	
+    It will create a new array instance from a variable number of arguments no matter what the number or the type of arguments are.
+Array.prototype.copyWithin()	
+    It will copy the portion of an array to a different place within the same array.
+Array.prototype.find()	
+    It will find an element in an array, based on certain parameters that are passed into this method.
+Array.prototype.findIndex()	
+    It will return the index of the first element of the given array that fulfills the given condition.
+Array.prototype.entries()	
+    It will return an array iterator object that can be used while looping through the keys and values of arrays.
+Array.prototype.keys()	
+    It will return an array iterator object as well as the keys of the array.
+Array.prototype.values()	
+    It will provide the value of each key.
+Array.prototype.fill() 
+    It will fill the specific array elements with a static value.
+
+16. Name some string functions introduced in ES6.
+
+startsWith	
+    It determines if a string begins with the characters of a given string.
+endsWith	
+    It determines if a string ends with the characters of a given string.
+includes	
+    It will return true if the given argument is present in the string.
+repeat	
+    It creates and returns a new string which contains the given number of copies of the string on which this method was called, concatenated together.
